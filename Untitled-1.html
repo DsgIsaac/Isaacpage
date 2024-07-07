@@ -1,0 +1,35 @@
+body {
+    background-color: orange; /* Color de fondo naranja */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centrar verticalmente */
+    margin: 0;
+}
+
+.llama-container {
+    position: relative;
+    width: 200px;
+    height: 400px;
+}
+
+.llama {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 150px;
+    background-image: url('llama.gif'); /* Imagen de la llama animada */
+    background-size: cover;
+    animation: llama-flicker 1s infinite alternate;
+}
+
+@keyframes llama-flicker {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
